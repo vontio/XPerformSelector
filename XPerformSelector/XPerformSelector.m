@@ -49,4 +49,17 @@
     va_end(args);
 }
 
++(void) performInBackground: (id)target selector:(SEL)selector withObject:(id)arg1
+{
+    [target performSelectorInBackground:selector withObject:arg1];
+}
++(void) performOnMainThread: (id)target selector:(SEL)selector withObject:(id)arg1 waitUntilDone:(BOOL)wait
+{
+    [target performSelectorOnMainThread:selector withObject:arg1 waitUntilDone:wait];
+}
++(void) performOnMainThread: (id)target selector:(SEL)selector withObject:(id)arg1 waitUntilDone:(BOOL)wait modes:(NSArray*)modes
+{
+    [target performSelectorOnMainThread:selector withObject:arg1 waitUntilDone:wait modes:modes];
+}
+
 @end

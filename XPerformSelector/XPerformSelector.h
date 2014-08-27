@@ -16,4 +16,8 @@
 +(void) perform: (id)target selector:(SEL)selector afterDelay:(NSTimeInterval)delay;
 +(void) perform: (id)target selector:(SEL)selector withObject:(id)arg1 afterDelay:(NSTimeInterval)delay;
 
++(void) performInBackground: (id)target selector:(SEL)selector withObject:(id)arg1;
++(void) performOnMainThread: (id)target selector:(SEL)selector withObject:(id)arg1 waitUntilDone:(BOOL)wait;
++(void) performOnMainThread: (id)target selector:(SEL)selector withObject:(id)arg1 waitUntilDone:(BOOL)wait modes:(NSArray*)modes;
+
 @end
